@@ -1,81 +1,177 @@
-* {
-    background-color: #605291;
-    margin: 10px;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(70, 76, 136);
+
 }
 
-.container {
-    padding: 5px 10px;
-    /* border: solid 0.5px black; */
-    border-radius: 100px;
-    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.479);
-    background-color: white;
+@font-face {
+    font-family: mine;
+    src: url(../fonts/nasalization-rg.otf);
+  }
+
+.container-header {
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 20px 20px 4px 4px ;
+    height: 90px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.461);
 }
 
-.container-logos {
-    padding: 0%;
-    margin:  auto 1%;
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-end;
-    width: 90vw;
-    
+.profile-img {
+    margin-left: 15px;
 }
 
-.item-1 {
-    background-color: transparent;
-    margin: 0%;
-}
-
-.foto {
-    width: 100px;
+.profile-img img {
+    height: 65px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
 }
 
-.item-2 {
-    background-color: transparent;
-    margin: 0%;
+.name {
+    font-family: mine;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.493);
 }
-
-.linkedin {
-    width: 70px;
-    background-color: transparent;
-}
-
-.item-3 {
-    background-color: transparent;
-    margin: 0%;
-}
-
-.github {
-    width: 70px;
-    background-color: transparent;
+ 
+.header-links {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
 }
 
 a {
-    background-color: transparent;
-    padding: 0%;
-    margin: 0%;
+    text-decoration: none;
 }
 
-.h1 {
-    background-color: transparent;
-    padding: 0%;
-    margin: 0%;  
+.linkdin {
+    height: 38px;
 }
 
-.container-h1 {
-    padding: 5px 10px;
-    /* border: solid 0.5px black; */
-    border-radius: 100px;
-    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.479);
-    background-color: white;
+.git {
+    margin-left: 10px;
+    height: 38px;
+}
+
+.container-main {
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 4px ;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.461);
+}
+
+.projetos, .projetos, .linha-1, .linha-2 {
+    background-color: transparent;
+}
+
+.projetos h1 {
+    text-align: center;
+    font-family: mine;
+    
+}
+
+.projeto-capa {
+    width: 190px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.557);
+}
+
+.projeto-capa:hover {
+    width: 190px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px #ff0099b4;
+}
+
+
+.container-footer {
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 4px 4px 20px 20px;
+    height: 50px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.461);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    background-color: transparent;
-    padding: 0%;
-    margin: 0%;
+.powerby {
+    background-color: transparent;  
 }
+
+.powerby p {
+    background-color: transparent;  
+    font-family: mine;
+    color: #000;
+}
+
+form {
+    background-color: #fff;
+    margin: 15px;
+    border-radius: 4px ;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.461);
+}
+
+form h1 {
+    margin: 0%;
+    margin-bottom: 25px;
+    font-family: mine;
+}
+
+form label{
+    font-family: mine;
+    font-size: 1.3rem;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+.container-form {
+    border: 2px solid black;
+    border-radius: 30px 10px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #e1e1e1;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.461);
+
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px 7px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.461);
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.461);
+}
+
+button:active {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.461);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

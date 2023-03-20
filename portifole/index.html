@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +9,89 @@
     <title>Henrique Bocca</title>
 </head>
 <body>
-    <div class="container">
-        <div class="item-1"><img class="foto" src="style/images/perfil.png" alt=""></div>
-        <div class="container-logos">
-            <div class="item-2">
-                <a href="https://www.linkedin.com/in/henrique-corr%C3%AAa/" target="_blank"><img class="linkedin" src="style/images/linkdin-logo.png" alt=""></a>
+   <header>
+        <div class="container-header">
+            <div class="profile-img">
+                <img src="style/images/perfil.png" alt="">
             </div>
-            <div class="item-3">
-                <a href="https://github.com/boccar" target="_blank"><img class="github" src="style/images/logo-git.png" alt=""></a>
-            </div>
-        </div>
-    </div>
 
-    <div class="container-h1">
-        <div class="h1">
-            <h1>Meus projetos</h1>
+            <div class="h1-name">
+                <h1 class="name">HENRIQUE BOCCA</h1>
+            </div>
+
+            <div class="header-links">
+                <a href="https://www.linkedin.com/in/henrique-corr%C3%AAa/" target="
+                ">
+                    <img class="linkdin" src="style/images/linkdin-logo.png" alt="linkdin">
+                </a>
+                <a href="https://github.com/boccar" target="_blank">
+                    <img class="git" src="style/images/logo-git.png" alt="github">
+                </a>
+            </div>
         </div>
-    </div>
+   </header>
+
+   <main>
+    
+        <div class="container-main">
+            
+            <div class="projetos">
+                <h1>PROJETOS</h1>
+                <div class="linha-1">
+                    <a href="">
+                        <img class="projeto-capa" src="style/images/timer.png" alt="">
+                    </a>
+                    <a href="">
+                        <img class="projeto-capa" src="style/images/todo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="linha-2">
+                    <a href="">
+                        <img class="projeto-capa" src="style/images/imc.png" alt="">
+                    </a>
+                    <a href="">
+                        <img class="projeto-capa" src="style/images/marry.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+            
+        </div>
+   </main>
+
+   <form action="#" method="get">  
+        <div class="container-form">
+            <h1 class=".form-h1" >Deixe uma menssgem</h1>
+            <p>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Exemplo@exemplo.com" required>
+            </p>
+    
+            <p>
+                <label for="dev">Sou dev</label>
+                <input type="checkbox" id="dev" name="dev">
+            </p>
+    
+            <div class="btn">
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+   </form>
+
+   <footer>
+        <div class="container-footer">
+            <div class="powerby">
+                <a href="">
+                    <p>Henrique Bocca</p>
+                </a>
+            </div>
+        </div>
+   </footer>
    
 </body>
