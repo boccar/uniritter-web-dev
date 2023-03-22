@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/css/styles.css">
+    <script src="https://kit.fontawesome.com/ec01852829.js" crossorigin="anonymous"></script>
+    <title>Calculadora</title>
+</head>
+    <body class="container-body">
+        <div id="calculadora" class="calculadora">
+            <header class="container-header">
+                <div id="visor" class="visor">
+                    <div>
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                    <p id="resultado"></p>
+                </div>
+            </header>
+            <main class="container-main">
+                <table>
+                    <tr>
+                        <th colspan="2"><button class="op-cima" onclick="clean()">C</button></th>
+                        <th class="op-cima">%</th>
+                        <th class="op-lado">÷</th>
+                    </tr>
+
+                    <tr>
+                        <th><button class="num" onclick="insert('7')">7</button></th>
+                        <th class="num">8</th>
+                        <th class="num">9</th>
+                        <th class="op-lado">×</th>
+                    </tr>
+
+                    <tr>
+                        <th class="num">4</th>
+                        <th class="num">5</th>
+                        <th class="num">6</th>
+                        <th class="op-lado">-</th>
+                    </tr>
+
+                    <tr>
+                        <th class="num">1</th>
+                        <th class="num">2</th>
+                        <th class="num">3</th>
+                        <th><button class="op-lado" onclick="insert('+')">+</button></th>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2" class="num0">0</th>
+                        <th class="num">,</th>
+                        <th><button class="op-lado" onclick="calcular()">=</button></th>
+                    </tr>
+                </table>
+
+            </main>
+            <footer class="container-footer">
+
+            </footer>
+        </div>
+    <script src="assets/js/script.js"></script>
+    </body>
+</html>
