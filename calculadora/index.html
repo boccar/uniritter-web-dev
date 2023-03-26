@@ -26,36 +26,36 @@
             <main class="container-main">
                 <table>
                     <tr>
-                        <th colspan="2"><button class="op-cima" onclick="clean()">C</button></th>
-                        <th class="op-cima">%</th>
-                        <th class="op-lado">÷</th>
+                        <th colspan="2" class="numC" onclick="clean()">C</th>
+                        <th class="op-cima" onclick="insert('%')">%</th>
+                        <th class="op-lado" onclick="insert('/')">÷</th>
                     </tr>
 
                     <tr>
-                        <th><button class="num" onclick="insert('7')">7</button></th>
-                        <th class="num">8</th>
-                        <th class="num">9</th>
-                        <th class="op-lado">×</th>
+                        <th class="num" onclick="insert('7')">7</th>
+                        <th class="num" onclick="insert('8')">8</th>
+                        <th class="num" onclick="insert('9')">9</th>
+                        <th class="op-lado" onclick="insert('*')">×</th>
                     </tr>
 
                     <tr>
-                        <th class="num">4</th>
-                        <th class="num">5</th>
-                        <th class="num">6</th>
-                        <th class="op-lado">-</th>
+                        <th class="num" onclick="insert('4')">4</th>
+                        <th class="num" onclick="insert('5')">5</th>
+                        <th class="num" onclick="insert('6')">6</th>
+                        <th class="op-lado" onclick="insert('-')">-</th>
                     </tr>
 
                     <tr>
-                        <th class="num">1</th>
-                        <th class="num">2</th>
-                        <th class="num">3</th>
-                        <th><button class="op-lado" onclick="insert('+')">+</button></th>
+                        <th class="num" onclick="insert('1')">1</th>
+                        <th class="num" onclick="insert('2')">2</th>
+                        <th class="num" onclick="insert('3')">3</th>
+                        <th class="op-lado" onclick="insert('+')">+</th>
                     </tr>
 
                     <tr>
-                        <th colspan="2" class="num0">0</th>
-                        <th class="num">,</th>
-                        <th><button class="op-lado" onclick="calcular()">=</button></th>
+                        <th colspan="2" class="num0" onclick="insert('0')">0</th>
+                        <th class="num" onclick="insert('.')">.</th>
+                        <th class="op-lado" onclick="calcular()">=</th>
                     </tr>
                 </table>
 

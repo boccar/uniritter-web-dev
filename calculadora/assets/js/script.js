@@ -22,9 +22,14 @@ function back() {
     document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
 }
 
-const checkbox =  document.getElementById('checkbox') 
 
-checkbox.addEventListener('change', () => {
-	
-        document.documentElement.style.setProperty(':root', ':root.dark'); 
+const checkbox = document.getElementById("checkbox");
+const html = document.querySelector("html");
+
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
 });

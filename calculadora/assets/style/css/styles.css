@@ -43,7 +43,7 @@
     color: var(--cor1);
     display: flex;
     justify-content: space-between;
-   
+    height: 146px;
     /* border: 3px solid rgb(255, 255, 255); */
 }
 
@@ -59,7 +59,7 @@
     color: var(--cor1);
 }
 
-.op-cima {
+.op-cima , .numC{
 background-color: var(--cor2);
 color: var(--cor);
 }
@@ -68,11 +68,12 @@ color: var(--cor);
     background-color: rgb(225, 153, 9);
 }
 
+
 .num, .num0 {
     background-color: var(--cor3);
 }
 
-.num, .num0, .op-cima, .op-lado {
+.num, .num0, .op-cima, .op-lado, .numC {
     width: 70px;
     height: 70px;
     border-radius:100px;
@@ -82,7 +83,7 @@ color: var(--cor);
     cursor: pointer;
 }
 
-.num0 {
+.num0, .numC {
     text-align: left;
     padding-left: 28px;
 }
