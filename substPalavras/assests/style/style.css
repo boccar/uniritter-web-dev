@@ -1,0 +1,21 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: rgb(35, 48, 90);
+}
+
+main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.box-1, .box-2, .box-3 {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    
+}
