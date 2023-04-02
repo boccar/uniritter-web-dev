@@ -1,21 +1,75 @@
-* {
-    margin: 0%;
-    padding: 0%;
+:root {
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
+
+
+@media screen and (max-width: 600px) {
+    form {
+        display: block;
+        
+    }
+
+    .troca {
+        width: 100px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .input {
+        width: 200px;
+        height: 33px;
+        border-radius: 50px;
+        margin: 30px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+
+    form {
+        display: flex;
+        justify-content: center;
+    }
+    .troca {
+        width: 100px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        margin: 0 30px;
+    }
+
+    .input {
+        width: 200px;
+        border-radius: 50px;
+    }
+}
+
 
 body {
-    background-color: rgb(35, 48, 90);
+    background-color: rgb(29, 29, 58);
 }
 
-main {
+
+.div-limpa {
+    margin-top: 30px;
     display: flex;
-    align-content: center;
     justify-content: center;
 }
 
-.box-1, .box-2, .box-3 {
-    border: 1px solid black;
-    padding: 5px;
-    margin: 5px;
-    
+.limpa {
+    width: 100px;
+    border-radius: 50px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.troca_ico {
+    width: 30px;
 }
