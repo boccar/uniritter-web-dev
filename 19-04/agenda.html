@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=".\style.css">
+    <title>Agenda Telefônica</title>
+    <style>
+        body,
+        input,
+        button,
+        table {
+            font-family: "Arial", Times, serif;
+            font-size: 24px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f9f9f;
+
+        }
+
+        #search-input {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0px;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: none;
+            border-bottom: 1px solid #555;
+            font-size: 16px;
+            color: #333;
+        }
+
+        th {
+            background-color: #6b602b;
+            color: #fff;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input[type=text],
+        input[type=tel],
+        input[type=email] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            border-color: #333;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            font-size: 16px;
+            background-color: #f2f2f2;
+            color: #333;
+            font-size: 20px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.479);
+        }
+
+        button {
+            background-color: #6b602b;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #c9b551;
+            color: black;
+        }
+
+        #message-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #0077b6;
+            color: #fff;
+            text-align: center;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .btn-sub {
+            border-radius: 100px;
+            font-size: 1.5rem;
+            padding: 10px 17px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.479);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Agenda</h1>
+    <form id="add-contact-form">
+        <label for="contact-name"></label>
+        <input placeholder="Nome:" type="text" id="contact-name" required>
+        <label for="contact-phone"></label>
+        <input placeholder="Telefone:" type="text" id="contact-phone" required>
+        <label for="contact-email"></label>
+        <input placeholder="E-mail:" type="email" id="contact-email" name="email">
+        <center><button class="btn-sub" type="submit"><strong>+</strong></button></center>
+
+    </form>
+    <br>
+    <input type="text" id="search-input" placeholder="Pesquisar...">
+    <br>
+    <table id="contact-list">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        const addContactForm = document.getElementById("add-contact-form");
+        const contactList = document.getElementById("contact-list");
+        const searchInput = document.getElementById("search-input");
+
+        function addContact(name, phone, email) {
+            const row = document.createElement("tr");
+            const nameCell = document.createElement("td");
+            const phoneCell = document.createElement("td");
+            const emailCell = document.createElement("td");
+            const deleteButtonCell = document.createElement("td");
+            const deleteButton = document.createElement("button");
+
+            nameCell.textContent = name;
+            phoneCell.textContent = phone;
+            emailCell.textContent = email;
+            deleteButton.textContent = "Excluir";
+            deleteButton.classList.add("delete-button");
+
+            deleteButtonCell.appendChild(deleteButton);
+            row.appendChild(nameCell);
+            row.appendChild(phoneCell);
+            row.appendChild(emailCell);
+            row.appendChild(deleteButtonCell);
+            contactList.getElementsByTagName("tbody")[0].appendChild(row);
+        }
+        function deleteContact(deleteButton) {
+            const row = deleteButton.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            saveContacts();
+        }
+
+        // Salva a lista de contatos no localStorage
+        function saveContacts() {
+            const contacts = [];
+            const rows = contactList.getElementsByTagName("tr");
+            for (let i = 0; i < rows.length; i++) {
+                const nameElement = rows[i].getElementsByTagName("td")[0];
+                if (nameElement) {
+                    const name = nameElement.textContent;
+                    const phoneElement = rows[i].getElementsByTagName("td")[1];
+                    const emailElement = rows[i].getElementsByTagName("td")[2];
+                    if (phoneElement && emailElement) {
+                        const phone = phoneElement.textContent;
+                        const email = emailElement.textContent;
+                        contacts.push({ name, phone, email });
+                    }
+                }
+            }
+            localStorage.setItem("contacts", JSON.stringify(contacts));
+        }
+
+        // Carrega a lista de contatos salva no localStorage
+        function loadContacts() {
+            const savedContacts = localStorage.getItem("contacts");
+            if (savedContacts) {
+                const contacts = JSON.parse(savedContacts);
+                for (let i = 0; i < contacts.length; i++) {
+                    addContact(contacts[i].name, contacts[i].phone, email);
+                    const email = contacts[i].email;
+                }
+            }
+        }
+
+        // Filtra a lista de contatos pelo nome
+        function filterContacts() {
+            const filter = searchInput.value.toUpperCase();
+            const rows = contactList.getElementsByTagName("tr");
+            for (let i = 0; i < rows.length; i++) {
+                const name = rows[i].getElementsByTagName("td")[0];
+                if (name) {
+                    const text = name.textContent.toUpperCase();
+                    if (text.indexOf(filter) > -1) {
+                        rows[i].style.display = "";
+                    } else {
+                        rows[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // Event listener para adicionar um novo contato
+        addContactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const name = document.getElementById("contact-name").value;
+            const phone = document.getElementById("contact-phone").value;
+            const email = document.getElementById("contact-email").value;
+            addContact(name, phone, email);
+            saveContacts();
+            addContactForm.reset();
+        });
+
+        // Event listener para excluir um contato
+        contactList.addEventListener("click", function (event) {
+            if (event.target.classList.contains("delete-button")) {
+                deleteContact(event.target);
+            }
+        });
+
+        // Event listener para filtrar a lista de contatos
+        searchInput.addEventListener("keyup", filterContacts);
+
+        // Carrega a lista de contatos salva no localStorage ao iniciar a página
+        loadContacts();
+    </script>
+</body>
+
+</html>
