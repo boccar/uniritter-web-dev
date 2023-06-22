@@ -25,10 +25,10 @@ export default {
     FooterSection,
   },
   head: {
-    title: 'Digital Heaven Agency',
-    titleTemplate: '%s | Boost Your Google Maps Reviews',
+    title: 'CONST',
+    titleTemplate: '%s | Melhore sua imagem',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-br',
     },
     meta: [
       { charset: 'utf-8' },
@@ -37,25 +37,25 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Improve your visibility, gain new customers, and boost your online reputation with our reliable review enhancement service. More positive reviews, more new customers.',
+          '',
       },
       // Open Graph
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Digital Heaven Agency',
+        content: 'CONST',
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Improve your visibility, gain new customers, and boost your online reputation with our reliable review enhancement service. More positive reviews, more new customers.',
+          '',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://www.digitalheaven.agency/',
+        content: 'https://www.const.dev.br/',
       },
       // Twitter Card
       {
@@ -66,17 +66,17 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Digital Heaven Agency',
+        content: 'CONST',
       },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
         content:
-          'Improve your visibility, gain new customers, and boost your online reputation with our reliable review enhancement service. More positive reviews, more new customers.',
+          '',
       },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@DigitalHeaven' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@const' },
     ],
-    link: [{ rel: 'canonical', href: 'https://www.digitalheaven.agency/' }],
+    link: [{ rel: 'canonical', href: 'https://www.const.dev.br/' }],
   },
 }
 </script>
