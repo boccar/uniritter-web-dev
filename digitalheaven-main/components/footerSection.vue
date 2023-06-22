@@ -2,8 +2,7 @@
   <footer class="footer-section">
     <div class="content-container">
       <p class="copyright-statement">
-        © {{ new Date().getFullYear() }} Digital Heaven Agency. All rights
-        reserved.
+        © {{ new Date().getFullYear() }} CONST.
       </p>
     </div>
   </footer>
